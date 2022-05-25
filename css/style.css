@@ -90,7 +90,6 @@ button::-moz-focus-inner {
   padding: 0
 }
 
-/*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
 @media print {
 
   *,
@@ -107,9 +106,6 @@ button::-moz-focus-inner {
     text-decoration: underline
   }
 
-  a[href]:after {
-    content: " ("attr(href) ")"
-  }
 
   a[href^="#"]:after,
   a[href^="javascript:"]:after {
@@ -130,6 +126,7 @@ button::-moz-focus-inner {
     orphans: 3;
     widows: 3
   }
+
 
   h2,
   h3 {
@@ -1591,7 +1588,7 @@ h6 {
   position: absolute;
   right: 0;
   z-index: -1;
-  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .edge--bottom:after {
@@ -1614,7 +1611,7 @@ h6 {
   position: absolute;
   right: 0;
   z-index: -1;
-  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .edge--bottom--reverse:after {
@@ -1637,7 +1634,7 @@ h6 {
   position: absolute;
   right: 0;
   z-index: -1;
-  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .edge--top:before {
@@ -1660,7 +1657,7 @@ h6 {
   position: absolute;
   right: 0;
   z-index: -1;
-  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .edge--top--reverse:before {
@@ -1684,7 +1681,7 @@ h6 {
   position: absolute;
   right: 0;
   z-index: -1;
-  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .edge--both:before {
@@ -1714,7 +1711,7 @@ h6 {
   position: absolute;
   right: 0;
   z-index: -1;
-  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .edge--both--reverse:before {
@@ -1983,7 +1980,7 @@ h6 {
   right: 0;
   z-index: 2;
   opacity: .9;
-  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   background-color: #607D8B;
   /* IE9, iOS 3.2+ */
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0idnNnZyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPjxzdG9wIHN0b3AtY29sb3I9IiM3YjNmNzUiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIwIi8+PHN0b3Agc3RvcC1jb2xvcj0iI2MyNGQ2NyIgc3RvcC1vcGFjaXR5PSIxIiBvZmZzZXQ9IjEiLz48L2xpbmVhckdyYWRpZW50PjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjdnNnZykiIC8+PC9zdmc+);
@@ -2123,7 +2120,7 @@ h6 {
   flex-grow: 1;
   background-size: cover;
   position: relative;
-  backgroun-repeat: no-repeat;
+  background-repeat: no-repeat;
 }
 
 @media screen and (max-width: 768px) {
@@ -3139,7 +3136,7 @@ h6 {
 .mfp-with-zoom .mfp-container,
 .mfp-with-zoom.mfp-bg {
   opacity: 0;
-  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   /* ideally, transition speed should match zoom duration */
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
@@ -3326,4 +3323,9 @@ h6 {
       opacity: 0;
     }
   }
+}
+
+.btn{
+  color: black;
+    margin-top: 20px;
 }
