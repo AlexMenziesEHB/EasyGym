@@ -2657,11 +2657,12 @@ h6 {
   padding: 10px 20px;
 }
 
+/*
 @media screen and (max-width: 992px) {
   #workouts .project-item .text {
     height: 65px;
   }
-}
+}*/
 
 #workouts .project-item .text h2,
 #workouts .project-item .text span {
