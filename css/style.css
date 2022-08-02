@@ -1106,12 +1106,6 @@ code {
   border: 1px solid transparent
 }
 
-.navbar:after,
-.navbar:before {
-  content: " ";
-  display: table
-}
-
 .navbar:after {
   clear: both
 }
@@ -1119,22 +1113,6 @@ code {
 @media (min-width:768px) {
   .navbar {
     border-radius: 4px
-  }
-}
-
-.navbar-header:after,
-.navbar-header:before {
-  content: " ";
-  display: table
-}
-
-.navbar-header:after {
-  clear: both
-}
-
-@media (min-width:768px) {
-  .navbar-header {
-    float: left
   }
 }
 
@@ -1560,17 +1538,17 @@ h6 {
   margin: 0 0 30px 0;
 }
 
-::-webkit-selection {
+a::-webkit-selection {
   color: #818892;
   background: #f9f6f0;
 }
 
-::-moz-selection {
+a::-moz-selection {
   color: #818892;
   background: #f9f6f0;
 }
 
-::selection {
+a::selection {
   color: #818892;
   background: #f9f6f0;
 }
@@ -1964,8 +1942,10 @@ h6 {
 
 #home {
   background-color: transparent;
-  background-size: cover;
+  background-size: contain;
   background-attachment: fixed;
+  background-size: 110%;
+  background-position: -50px 0px;
   position: relative;
   width: 100%;
   background-color: #607D8B;
@@ -3029,7 +3009,7 @@ h6 {
 
 .btn.btn-primary {
   background: #607D8B;
-  color: #fff;
+  color: #fff !important;
   border: none !important;
   border: 2px solid transparent !important;
 }
@@ -3327,6 +3307,12 @@ h6 {
 }
 
 .btn{
-  color: red;
     margin-top: 20px;
+}
+
+.btn-light{
+  border: 1px solid transparent;
+  border-radius: 4px;
+  width: min-content;
+  background-color: "#e9e9ed"
 }
