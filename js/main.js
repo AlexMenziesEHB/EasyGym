@@ -76,11 +76,3 @@
         scrub: true
         }
     })
-
-/**
- * REFACTORING:
- * Update all the links : CSS & JS
- * Update the Nav-Header : correspond to Bootstrap architecture + remove "active" class
- * Updated the background image of the "Home" => no X background-position
- * Add "#footer-gotop" to the "gotop" button
- */
