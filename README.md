@@ -19,7 +19,7 @@
 ---
 ## About this project
 
-This Achievements API allows you to create and modify achivements and have a deeper look into their depending genre.
+EASYGYM allows the athlete to view the various exercises without having to 'disturb' anyone for help or explanation. In this way, athletes can work out completely individually in the fitness room.
 
 
 ---
@@ -28,15 +28,18 @@ This Achievements API allows you to create and modify achivements and have a dee
 1. Clone this repository from github.
 2. Navigate to the root folder and op index.html with live server to open it in a chrome tab.
 3. To contrubute to this project make sure to read 'CONTRIBUTING.md' located in the root folder
+4. To use the simulator navigate to the Workout folder and start a .py file
 
 ---
 # How it works
 
-TEXT
+EASYGYM lets you watch different exercises in a fun and easy way through the homemade videos with instructions. It's as easy as scanning a qr code and watching the video. If that doesn't help watch the bottom instructions under each video! or use the build in simulator
 
 ---
 # Used dependencies
 * Git flow
+* PoseModule
+* Python
 
 ---
 
