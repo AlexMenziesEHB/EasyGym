@@ -2,23 +2,23 @@
 // Smooth Scroll
     // Nav Home
     document.querySelector("#navHome").addEventListener("click", function(){
-        gsap.to(window, {duration: 0, scrollTo: "#home"});
+        gsap.to(window, {duration: 1, scrollTo: "#home"});
     })
 
     // Nav Workout
     document.querySelector("#navWork").addEventListener("click", function(){
-        gsap.to(window, {duration: 0, scrollTo: "#workouts"});
+        gsap.to(window, {duration: 1, scrollTo: "#workouts"});
     })
 
     //  Nav How it works
     document.querySelector("#navHowW").addEventListener("click", function(){
-        gsap.to(window, {duration: 0, scrollTo: "#HowItWorks"});
+        gsap.to(window, {duration: 1, scrollTo: "#HowItWorks"});
     })
 
     // Go top Footer
     document.querySelector("#footer-gotop").addEventListener("click", function(event){
         event.preventDefault()
-        gsap.to(window, {duration: 0, scrollTo: 0});
+        gsap.to(window, {duration: 1, scrollTo: 0});
     })
 
 // Navbar fixed to top out of header
