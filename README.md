@@ -40,6 +40,8 @@ EASYGYM lets you watch different exercises in a fun and easy way through the hom
 * Git flow
 * PoseModule
 * Python
+* Bootstrap
+* Gsap
 
 ---
 
