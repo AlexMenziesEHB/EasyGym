@@ -23,20 +23,19 @@ while True:
     img = detector.findPose(img)
     lmlst, bbox = detector.findPosition(img,draw=False)
     if lmlst:
-        #ARMS
+        #Detect Arms Points
         a1 = detector.findAngle(img, 12, 14, 16)
         a2 = detector.findAngle(img, 15, 13, 11)
-        #back
+        #Detect Back Points
         a3 = detector.findAngle(img, 12, 24, 26)
-        #ARMS
+        #Detect Arms Points
         a4 = detector.findAngle(img, 14, 12, 24)
         a5 = detector.findAngle(img, 23, 11, 13)
 
+        #Detect between what values the muscle has to move to give out a percentage 
         per_val1 = int(np.interp(a1, (85, 175), (100, 0)))
         per_val2 = int(np.interp(a2, (85, 175), (100, 0)))
-
         per_val3 = int(np.interp(a3, (230, 300), (300, 0)))
-
         per_val4 = int(np.interp(a4, (230, 300), (100, 0)))
         per_val5 = int(np.interp(a5, (230, 300), (100, 0)))
 
@@ -47,23 +46,19 @@ while True:
         bar_val5 = int(np.interp(per_val5, (0, 100), (40 + 350, 40)))
         print(per_val5)
         # 1st Bar
-        #cv2.rectangle(img, (570, bar_val2), (570+35,40+350), (0,0,255), cv2.FILLED)
-        #cv2.rectangle(img, (570,40), (570+35,40+350),0,3)
+        # Fill
         cv2.rectangle(img, (570+640, bar_val2), (570+640 + 35, 150 + 350), color, cv2.FILLED)
+        # Border
         cv2.rectangle(img, (1210,150),(1210+35,150+350),(),2)
         # 2nd Bar
-        #cv2.rectangle(img, (35, bar_val1), (35 + 35, 40 + 460), (0, 0, 255), cv2.FILLED)
-        #cv2.rectangle(img, (35, 40), (35 + 35, 40+460) , (), 3)
+        # Fill
         cv2.rectangle(img, (35, bar_val1), (35 + 35, 150 + 350), color, cv2.FILLED)
+        # Border
         cv2.rectangle(img, (35, 150), (35 + 35, 150 + 350), (), 2)
 
-        # Back visual
-        #cv2.rectangle(img, (200, bar_val3), (200 + 35, 40 + 350), color, cv2.FILLED)
-        #cv2.rectangle(img, (200, 40), (200 + 35, 40 + 350), (), 3)
-
         # Bar Percentages
-        cvzone.putTextRect(img, f'{per_val2} %', (30, 120), 1.1, 2, colorT=(255, 255, 255), colorR=(BgColor))
-        cvzone.putTextRect(img, f'{per_val1} %', (1200, 120), 1.1, 2, colorT=(255, 255, 255), colorR=(BgColor))
+        cvzone.putTextRect(img, f'{per_val1} %', (30, 120), 1.1, 2, colorT=(255, 255, 255), colorR=(BgColor))
+        cvzone.putTextRect(img, f'{per_val2} %', (1200, 120), 1.1, 2, colorT=(255, 255, 255), colorR=(BgColor))
 
         # count push ups
         if per_val1 == 100 and per_val2 == 100:
@@ -73,16 +68,16 @@ while True:
                 color = (0, 255, 0)
         elif per_val1 == 0 and per_val2 == 0:
             if dir == 1:
-                push_ups += 1
+                push_ups += 0
                 dir = 0
                 color = (0, 255, 0)
         else:
             color = (255, 255, 255)
-
+        
+        # Name label & counter
         cvzone.putTextRect(img, f'Push Ups: {int(push_ups)}/20', (440, 60), 3, 2, colorT=(255, 255, 255), colorR=(BgColor))
         cvzone.putTextRect(img,'Left Arm', (43, 600+80), 3, 2, colorT=(255, 255, 255), colorR=(BgColor))
         cvzone.putTextRect(img,'Right Arm', (985, 600+80), 3, 2, colorT=(255, 255, 255), colorR=(BgColor))
-        # print(push_ups)
 
         # Back feedback
         if per_val3 <= 290:
